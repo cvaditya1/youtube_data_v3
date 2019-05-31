@@ -1,6 +1,12 @@
 # youtube_data_v3
 
-Package contains helper's to access Youtube Data API V3 via the API key
+Package contains functions to access Youtube Data API V3 via the API key. 
+
+The package uses Api's with parameters having less quota's.
+
+## Features
+
+* Channel & videos from from channel id.
 
 ## Getting Started
 
