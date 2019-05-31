@@ -6,7 +6,7 @@ The package uses Api's with parameters having less quota's.
 
 ## Features
 
-* Channel & videos from from channel id.
+* Channel & videos from channel id.
 
 ## Getting Started
 
