@@ -5,6 +5,7 @@ class YtChannel{
 
   YoutubeApi _ytApi;
   Channel _channel;
+  Channel get gApiChannel => _channel;
 
   YtChannel(Channel channel, {YoutubeApi youtubeApi}){
     _channel = channel;

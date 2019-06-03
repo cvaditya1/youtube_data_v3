@@ -2,7 +2,7 @@ import 'package:googleapis/youtube/v3.dart';
 
 class YtVideo{
   PlaylistItem _playlistItem;
-  PlaylistItem get playListItem => _playlistItem;
+  PlaylistItem get videoItem => _playlistItem;
 
   YtVideo(PlaylistItem playlistItem){
     this._playlistItem = playlistItem;
