@@ -1,7 +1,7 @@
 name: youtube_data_v3
 description: A youtubeV3 package
 version: 0.0.1
-author: Aditya
+author: Aditya <cvadityagithub@gmail.com>
 homepage: https://github.com/cvaditya1/youtube_data_v3
 
 environment:
