@@ -9,11 +9,11 @@ import 'package:youtube_data_v3/youtube_channel.dart';
 class YoutubeV3 {
   static final YoutubeV3 _singleton = new YoutubeV3._internal();
 
-  factory YoutubeV3(){
+  factory YoutubeV3() {
     return _singleton;
   }
 
-  YoutubeV3._internal(){
+  YoutubeV3._internal() {
     _createClientWithApiKey();
   }
 
@@ -24,31 +24,34 @@ class YoutubeV3 {
 
   YoutubeApi youtubeApi;
 
-  _createClientWithApiKey(){
-    if(_apiKey != null && _apiKey.isNotEmpty){
+  _createClientWithApiKey() {
+    if (_apiKey != null && _apiKey.isNotEmpty) {
       _client = clientViaApiKey(_apiKey);
       youtubeApi = new YoutubeApi(_client);
     }
   }
 
-  init(String apiKey){
+  init(String apiKey) {
     this.apiKey = apiKey;
   }
 
   set apiKey(String key) {
     bool clientChanged = false;
-    if(key != null && key.isNotEmpty && key != _apiKey) clientChanged = true;
-    if(clientChanged){
+    if (key != null && key.isNotEmpty && key != _apiKey) clientChanged = true;
+    if (clientChanged) {
       _apiKey = key;
       _createClientWithApiKey();
     }
   }
 
   Future<YtChannel> getChannelFromId(String channelId) async {
-    if(youtubeApi == null || (channelId?.isEmpty ?? true)) return null;
+    if (youtubeApi == null || (channelId?.isEmpty ?? true)) return null;
     var part = "snippet,contentDetails";
-    ChannelListResponse response =  await youtubeApi.channels.list(part, id: channelId);
+    ChannelListResponse response =
+        await youtubeApi.channels.list(part, id: channelId);
     List<Channel> channelList = response?.items ?? [];
-    return (channelList.length) > 0 ? YtChannel(channelList[0], youtubeApi: youtubeApi) : null;
+    return (channelList.length) > 0
+        ? YtChannel(channelList[0], youtubeApi: youtubeApi)
+        : null;
   }
 }
