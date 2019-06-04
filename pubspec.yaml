@@ -1,5 +1,5 @@
 name: youtube_data_v3
-description: A youtubeV3 package
+description: A youtubeV3 package which contains functions to access Youtube Data API V3 via the API key.
 version: 0.0.1
 author: Aditya <cvadityagithub@gmail.com>
 homepage: https://github.com/cvaditya1/youtube_data_v3

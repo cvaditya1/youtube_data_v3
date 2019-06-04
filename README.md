@@ -1,5 +1,7 @@
 # youtube_data_v3
 
+[![pub package](https://img.shields.io/badge/pub-v0.0.1-green.svg)](https://pub.dev/packages/youtube_data_v3/)
+
 Package contains functions to access Youtube Data API V3 via the API key. 
 
 The package uses Api's with parameters having less quota's.
